@@ -1,0 +1,80 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+<style>
+@import url('https://fonts.googleapis.com/css?family=Gaegu');
+</style>
+<link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+textarea, input{
+  padding: 3px 7px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+a {
+  decoration:none;
+  color:#392f31;
+
+}
+h1{
+  color:#392f31;
+  text-align:center;
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid #ccc;
+}
+table colgroup .num{
+  width: 70px;
+}
+table colgroup .writer {
+  width: 130px;
+}
+table colgroup .date {
+  width: 120px;
+}
+table tr{
+  border-bottom: 1px solid #ccc;
+}
+table td, th{
+  padding: 8px 20px;
+}
+table thead tr{
+  background-color: #F5F5F5;
+}
+
+
+button{
+  min-width: 55px;
+  color: #165751;
+  border: 1px solid #ccc;
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 5px 10px;
+  background-color:#f5f5f5;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+button:hover{
+  position: relative;
+  top: 1px;
+  left: 1px;
+  border: 1px solid #ccc;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+}
+button[disabled]{
+  color: #999 !important;
+}
+button[disabled]:hover{
+  top: 0 !important;
+  left: 0 !important;
+  border: 1px solid #ccc !important;
+  border-right: 1px solid #aaa !important;
+  border-bottom: 1px solid #aaa !important;
+}

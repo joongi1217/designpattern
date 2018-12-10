@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+   a:link { color: red; text-decoration: none;}
+   a:visited { color: black; text-decoration: none;}
+   a:hover { color: blue; text-decoration: underline;}
+  </style>
+  <% include ../header %>
+<link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="sample.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>board</title>
+</head>
+<body>
+  <button onclick="location.href='/board1/form'">글쓰기</button>
+	<table>
+		<br>
+    <br>
+		<colgroup>
+			<col class="num"/>
+			<col class="title"/>
+			<col class="writer"/>
+			<col class="date"/>
+		</colgroup>
+		<thead>
+			<tr>
+				<th>번호</th>
+				<th>제목</th>
+				<th>등록자</th>
+				<th>등록일</th>
+			</tr>
+		</thead>
+		<tbody>
+		<%
+			 for(var i=0; i<rows.length; i++) {
+		%>
+			<tr>
+				<td><%=rows[i].BRDNO%></td>
+				<td><a href='/board1/read?brdno=<%=rows[i].BRDNO%>'><%=rows[i].BRDTITLE%></a></td>
+				<td><%=rows[i].BRDWRITER%></td>
+				<td><%=rows[i].BRDDATE%></td>
+			</tr>
+		<%
+			 }
+		%>
+		</tbody>
+	</table>
+</body>
+</html>

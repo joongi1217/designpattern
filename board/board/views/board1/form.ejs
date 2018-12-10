@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+   a:link { color: black; text-decoration:none;}
+   a:visited { color: black; text-decoration:none;}
+   @import url('https://fonts.googleapis.com/css?family=Gaegu');
+  </style>
+  <% include ../header %>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>board</title>
+</head>
+<body>
+	<form name="form1" action="/board1/save" method="post">
+		<table style>
+			<caption>항상 예절 바른 인터넷 문화를 기릅시다^^</caption>
+			<colgroup>
+				<col width='15%' />
+				<col width='*%' />
+			</colgroup>
+			<tbody>
+				<tr>
+					<td>작성자</td>
+					<td colspan="3"><input type="text" placeholder="닉네임을 적어주세요." name="brdwriter" value="<%=row.BRDWRITER%>"></td>
+				</tr>
+				<tr>
+					<td>제목</td>
+					<td><input type="text" placeholder="제목을 입력하세요." name="brdtitle" value="<%=row.BRDTITLE%>"></td>
+				</tr>
+				<tr>
+          <td>내용</td>
+					<td colspan="3"><textarea name="brdmemo" rows="5" cols="60"><%=row.BRDMEMO%></textarea></td>
+				</tr>
+			</tbody>
+		</table>
+    <br>
+    <button><a href="#" onclick="history.back(-1)">이전</a></button>
+    <button class="float_left" onclick="form.submit()"><a href="#"></a>올리기</button>
+		<input type="hidden" name="brdno" value="<%=row.BRDNO%>">
+	</form>
+</body>
+</html>
